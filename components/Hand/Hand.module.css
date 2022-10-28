@@ -1,0 +1,10 @@
+.hand{
+	display: flex;
+}
+.cardWrapper{
+	transition: all .3s;
+	height: max-content;
+}
+.cardWrapper:hover{
+	transform: translateY(-3rem);
+}

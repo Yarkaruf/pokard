@@ -1,31 +1,37 @@
 .card {
     position: relative;
-    width: 6rem;
+    width: 8rem;
     transform-style: preserve-3d;
     transition: .3s;
-    --card-padding: 0.4rem;
+    border-radius: .3rem;
+    --card-padding: .5rem;
+    outline: 1px solid #57585a;
+    height: max-content;
 }
+
 .card:active{
     transform: rotateY(180deg);
     transition: .3s;
 }
+
 .card_face {
     position: relative;
+    border-radius: inherit;
     aspect-ratio: 64 / 89;
     padding: var(--card-padding);
-    border-radius: 0.5em;
     backface-visibility: hidden;
-    box-shadow: 0 0 0.5rem #000a;
 }
+
 .front {
     color: var(--card-suit-color, #57585a);
-    background-color: var(--card-background, white);
+    background-color: var(--card-background, rgb(255, 255, 255));
     display: flex;
     overflow: hidden;
 }
+
 .back {
     transform: rotateY(180deg);
-    background-image: url("https://deti-online.com/img/raskraski-cat/druzhba-eto-chudo.jpg");
+    background-image: url("https://ae04.alicdn.com/kf/S15c67b9f3e154d6c990971b6af15a866E/-.jpg");
     background-position: 50% 50%;
     background-size: cover;
     position: absolute;
@@ -37,7 +43,7 @@
 
 .value {
     align-self: flex-start;
-    font-size: x-large;
+    font-size: 3rem;
     font-weight: bolder;
     display: flex;
     flex-direction: column;
